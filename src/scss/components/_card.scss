@@ -1,0 +1,97 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  &:not(:last-child) {
+    @include w1199 {
+      margin-bottom: 50px;
+    }
+  }
+  &__price {
+    font-size: 17px;
+    line-height: 26px;
+    margin-bottom: 20px;
+  }
+  &__price-num {
+    position: relative;
+    min-width: 80px;
+  }
+  &__price--type {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transition: 1s linear;
+    min-width: 50px;
+    &.active {
+      top: 0;
+      opacity: 1;
+      position: static;
+    }
+  }
+  &__price-general {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 46px;
+    color: $secondary;
+  }
+  &__label {
+    position: absolute;
+    top: -47px;
+    right: 30px;
+    padding: 7px 17px 5px 16px;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 15px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.833333px;
+    color: $accent-secondary;
+    background: $third;
+    border-radius: 13.5px;
+    @include w1199 {
+      position: static;
+      top: initial;
+      left: initial;
+      margin: 20px auto;
+    }
+  }
+  &__title {
+    margin-bottom: 6px;
+    font-size: 28px;
+    line-height: 42px;
+    color: $secondary;
+  }
+  &__description {
+    margin-bottom: 18px;
+  }
+  &__list {
+    margin-bottom: 21px;
+    @include w767 {
+      margin-bottom: 38px;
+    }
+  }
+  &__list-item {
+    position: relative;
+    padding-left: 30px;
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      top: 0;
+      left: 0;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3e%3cpath d='M10 0C4.47715 0 0 4.47715 0 10C0 15.5228 4.47715 20 10 20C15.5228 20 20 15.5228 20 10C19.9936 4.47982 15.5202 0.00642897 10 0Z' fill='%235243C2' fill-opacity='0.15'/%3e%3cpath d='M15.7725 6.83334L10.0684 14.5742C9.93234 14.7547 9.72948 14.8729 9.50539 14.9024C9.2813 14.9319 9.05478 14.87 8.87671 14.7308L4.80338 11.4742C4.44393 11.1865 4.38573 10.662 4.67338 10.3025C4.96102 9.94306 5.4856 9.88486 5.84504 10.1725L9.24171 12.89L14.4309 5.84751C14.601 5.59217 14.8978 5.45099 15.2032 5.48004C15.5087 5.50909 15.7735 5.70365 15.8925 5.98649C16.0115 6.26932 15.9654 6.59466 15.7725 6.83334Z' fill='%237B72C1'/%3e%3c/svg%3e");
+      background-size: 20px 20px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+  &__btn {
+    width: 100%;
+    margin-top: auto;
+  }
+}

@@ -1,0 +1,26 @@
+.header {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    @include w767 {
+      padding: 31px 24px 32px;
+    }
+  }
+  &__btn {
+    font-size: 14px;
+    line-height: 18px;
+    @include w767 {
+      display: none;
+    }
+  }
+}
+.gumburger {
+  width: 32px;
+  height: 31px;
+}
+.logo {
+  width: 138px;
+  height: 30px;
+}
