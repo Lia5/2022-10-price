@@ -90,7 +90,7 @@ gulp.task('jsLint', function() {
 
 gulp.task('js', function() {
 	return gulp.src([
-		'./src/libs/1.jquery/dist/jquery.min.js',
+		// './src/libs/1.jquery/dist/jquery.min.js',
 		'./src/js/custom.js',
 		])
     .pipe(plumber())
